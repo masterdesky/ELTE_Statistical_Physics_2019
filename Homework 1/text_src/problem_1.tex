@@ -1,0 +1,76 @@
+\section*{Problem 1.}
+\subsection*{Question}
+Give the wave function in first quantization, which corresponds to the Fock-vector
+
+\begin{equation*}
+\ket{2,0,2,0,0, \dots}
+\end{equation*}
+of four particles, and the fermionic wave function corresponding to
+
+\begin{equation*}
+\ket{1,0,1,1,1,0,0,  \dots}.
+\end{equation*}
+
+\subsection*{Solution}
+First, we're looking for the $\Psi^{B}_{1133} \left( x_{1}, \dots, x_{4} \right)$ wavefunction at the bosonic (symmetric) case. The many-body wavefunction of this case could be written as follows:
+
+\begin{equation} \label{eq:1}
+\Psi^{B}_{\alpha} \left( x_{1}, \dots, x_{n} \right)
+=
+\braket{x_{1}, \dots, x_{N} | n_{1}, \dots, n_{N}}
+=
+\sqrt{\frac{\prod_{j} n_{j}!}{N!}}
+\sum_{p}
+\psi_{p \left( 1 \right)} \left( x_{1} \right)
+\psi_{p \left( 2 \right)} \left( x_{2} \right)
+\dots
+\psi_{p \left( N \right)} \left( x_{N} \right)
+\end{equation}
+Here, the sum is taken over all different states under permutations $p$ acting on $N$ elements. Since we only have 4 particles, we can write the following:
+
+\begin{equation} \label{eq:2}
+\Psi^{B}_{1133} \left( x_{1}, x_{2}, x_{3}, x_{4} \right)
+=
+\sqrt{\frac{2!*0!*2!*0!*\dots*0!}{4!}}
+\sum_{p}
+\psi_{p \left( 1 \right)} \left( x_{1} \right)
+\psi_{p \left( 2 \right)} \left( x_{2} \right)
+\psi_{p \left( 3 \right)} \left( x_{3} \right)
+\psi_{p \left( 4 \right)} \left( x_{4} \right)
+\end{equation}
+\begin{equation} \label{eq:3}
+\Psi^{B}_{1133} \left( x_{1}, x_{2}, x_{3}, x_{4} \right)
+=
+\sqrt{\frac{1}{6}}
+\sum_{p}
+\psi_{p \left( 1 \right)} \left( x_{1} \right)
+\psi_{p \left( 2 \right)} \left( x_{2} \right)
+\psi_{p \left( 3 \right)} \left( x_{3} \right)
+\psi_{p \left( 4 \right)} \left( x_{4} \right)
+\end{equation}
+Second, the $\Psi^{F}_{1345} \left( x_{1}, \dots, x_{4} \right)$ fermionic wavefunction could be written as a Slater determinant in the following form:
+
+\begin{equation} \label{eq:4}
+\Psi^{F}_{\alpha} \left( x_{1}, \dots, x_{n} \right)
+=
+\frac{1}{\sqrt{N!}}
+\begin{vmatrix}
+\psi_{n_{1}} \left( x_{1} \right) & \psi_{n_{1}} \left( x_{2} \right) & \dots  & \psi_{n_{1}} \left( x_{N} \right) \\
+\psi_{n_{2}} \left( x_{1} \right) & \psi_{n_{2}} \left( x_{2} \right) & \dots  & \psi_{n_{2}} \left( x_{N} \right) \\
+\vdots                            & \vdots                            & \ddots & \vdots \\
+\psi_{n_{N}} \left( x_{1} \right) & \psi_{n_{N}} \left( x_{2} \right) & \dots  & \psi_{n_{N}} \left( x_{N} \right)
+\end{vmatrix}
+\end{equation}
+In our case, it is the following:
+
+\begin{equation} \label{eq:5}
+\Psi^{F}_{1345} \left( x_{1}, x_{2}, x_{3}, x_{4} \right)
+=
+\frac{1}{\sqrt{4!}}
+\begin{vmatrix}
+\psi_{1} \left( x_{1} \right) & \psi_{1} \left( x_{2} \right) & \psi_{1} \left( x_{3} \right)  & \psi_{1} \left( x_{4} \right) \\
+\psi_{0} \left( x_{1} \right) & \psi_{0} \left( x_{2} \right) & \psi_{0} \left( x_{3} \right)  & \psi_{0} \left( x_{4} \right) \\
+\psi_{1} \left( x_{1} \right) & \psi_{1} \left( x_{2} \right) & \psi_{1} \left( x_{3} \right)  & \psi_{1} \left( x_{4} \right) \\
+\psi_{1} \left( x_{1} \right) & \psi_{1} \left( x_{2} \right) & \psi_{1} \left( x_{3} \right)  & \psi_{1} \left( x_{4} \right) \\
+\end{vmatrix}
+\end{equation}

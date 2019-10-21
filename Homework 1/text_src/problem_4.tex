@@ -1,0 +1,81 @@
+\section*{Problem 4.}
+\subsection*{Question}
+Prove that the particle number operator
+
+\begin{equation}
+\hat{N}
+=
+\sum_{s} \int d^{3} r
+\hat{\Psi}^{\dagger} \left( \boldsymbol{r}, s \right)
+\hat{\Psi} \left( \boldsymbol{r}, s \right)
+\end{equation}
+and the Hamiltonian
+
+\begin{align}
+\hat{H}
+&=
+\sum_{s} \int d^{3} r
+\hat{\Psi}^{\dagger} \left( \boldsymbol{r}, s \right)
+\left( -\frac{\hbar^{2}}{2m} \nabla - V \left( \boldsymbol{r} \right) \right)
+\hat{\Psi} \left( \boldsymbol{r}, s \right)
++ \nonumber \\
+&+
+\frac{1}{2} \sum_{s} \sum_{s'} \int d^{3} r \int d^{3} r'
+\hat{\Psi}^{\dagger} \left( \boldsymbol{r}, s \right)
+\hat{\Psi}^{\dagger} \left( \boldsymbol{r'}, s' \right)
+v \left( \left| \boldsymbol{r} - \boldsymbol{r'} \right| \right)
+\hat{\Psi} \left( \boldsymbol{r'}, s' \right)
+\hat{\Psi} \left( \boldsymbol{r}, s \right)
+\end{align}
+commute:
+
+\begin{equation}
+\left[ \hat{H}, \hat{N} \right] = 0
+\end{equation}
+both for bosons and for fermions.
+
+\subsection*{Solution}
+To solve the problem, we exactly need to prove, that the two expressions
+
+\begin{equation}
+\left[ \hat{H}, \Psi^{\dagger} \Psi \right]
+\end{equation}
+commutes. Using the identity, learned on the lecture:
+
+\begin{equation}
+\left[ \hat{O}_{1}, \hat{O}_{2} \hat{O}_{3} \right]
+=
+\left[ \hat{O}_{1}, \hat{O}_{2} \right]*\hat{O}_{3}
+-
+\hat{O}_{2} * \left[ \hat{O}_{1}, \hat{O}_{3} \right]
+\end{equation}
+We can expand the above commutator as follows:
+
+\begin{equation}
+\left[ \hat{H}, \Psi^{\dagger} \Psi \right]
+=
+\left[ \hat{H}, \Psi^{\dagger} \right] * \Psi
+-
+\Psi^{\dagger} * \left[ \hat{H}, \Psi \right]
+=
+\left(
+\hat{H} \Psi^{\dagger} \Psi - \Psi^{\dagger} \hat{H} \Psi
+\right)
+-
+\left(
+\Psi^{\dagger} \hat{H} \Psi - \Psi^{\dagger} \Psi \hat{H} \right)
+\end{equation}
+Since $\hat{H}$, the Hamiltonian is a Hermitian operator, we can reorganize the above equation:
+
+\begin{equation}
+\left[ \hat{H}, \Psi^{\dagger} \Psi \right]
+=
+\left(
+\Psi^{\dagger} \hat{H} \Psi - \Psi^{\dagger} \hat{H} \Psi
+\right)
+-
+\left(
+\Psi^{\dagger} \hat{H} \Psi - \Psi^{\dagger} \hat{H} \Psi \right)
+=
+0
+\end{equation}

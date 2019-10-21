@@ -1,0 +1,126 @@
+\section*{Problem 2.}
+\subsection*{Question}
+Calculate the quantity $\Braket{\hat{\varrho} \left( \boldsymbol{r}, s \right)}_{\Psi}$, where $\Psi$ is a pure state in Fock-space
+
+\begin{equation*}
+\Psi = \ket{n_{1}, n_{2}, \dots, n_{N}}.
+\end{equation*}
+Compare with the result (obtained at the practice) for fermions, given by a single Slater determinant in first quantization.
+
+\subsection*{Solution}
+The expectation value of the density operator $\hat{\varrho} \left( \boldsymbol{r}, s \right)$ could be derived as follows:
+
+\begin{equation} \label{eq:6}
+\Braket{\hat{\varrho} \left( \boldsymbol{r}, s \right)}_{\Psi}
+=
+\Braket{\Psi | \hat{\varrho} \left( \boldsymbol{r}, s \right) | \Psi}
+\end{equation}
+Where the density operator is
+
+\begin{equation} \label{eq:7}
+\hat{\varrho} \left( \boldsymbol{r}, s \right)
+=
+\sum_{i\ =\ 1}^{N} \delta \left( \boldsymbol{r} - \boldsymbol{r}_{i} \right) \delta_{s,s_{i}}
+\end{equation}
+Thus the equation could be reorganized into the following form:
+
+\begin{equation} \label{eq:8}
+\Braket{\hat{\varrho} \left( \boldsymbol{r}, s \right)}_{\Psi}
+=
+\Braket{\Psi | \sum_{i\ =\ 1}^{N} \delta \left( \boldsymbol{r} - \boldsymbol{r}_{i} \right) \delta_{s,s_{i}} | \Psi}
+=
+\Braket{n_{1}, n_{2}, \dots, n_{N} | \sum_{i\ =\ 1}^{N} \delta \left( \boldsymbol{r} - \boldsymbol{r}_{i} \right) \delta_{s,s_{i}} | n_{1}, n_{2}, \dots, n_{N}}
+\end{equation}
+The wavefunction $\Psi$ could be expressed as we've learned on the lecture for Fermions:
+
+\begin{equation} \label{eq:9}
+\Psi
+=
+\frac{1}{\sqrt{N!}}
+\sum_{i_{1} = 1}^{N} \dots \sum_{i_{N} = 1}^{N}
+\epsilon_{i_{1}, i_{2}, \dots, i_{N}}
+\varphi_{i_{1}} \left( \boldsymbol{r}_{1}, s_{1} \right)
+\varphi_{i_{2}} \left( \boldsymbol{r}_{2}, s_{2} \right)
+\dots
+\varphi_{i_{N}} \left( \boldsymbol{r}_{N}, s_{N} \right)
+\end{equation}
+Since $\hat{\rho} \left( \boldsymbol{r}, s \right)$ is Hermitian, we can reorganize the equations:
+
+\begin{equation} \label{eq:10}
+\Braket{\hat{\varrho} \left( \boldsymbol{r}, s \right)}_{\Psi}
+=
+\sum_{i\ =\ 1}^{N} \delta \left( \boldsymbol{r} - \boldsymbol{r}_{i} \right) \delta_{s,s_{i}}
+\Braket{\Psi | \Psi}
+=
+\sum_{i\ =\ 1}^{N} \delta \left( \boldsymbol{r} - \boldsymbol{r}_{i} \right) \delta_{s,s_{i}}
+\Braket{n_{1}, n_{2}, \dots, n_{N} | n_{1}, n_{2}, \dots, n_{N}}
+\end{equation}
+The second part could be expressed as follows:
+
+\begin{equation} \label{eq:11}
+\Braket{\Psi | \Psi}
+=
+\sum_{s_{1}} \dots \sum_{s_{N}} \int \dots \int dr^{3}_{1} \dots dr^{3}_{N} \Psi^{\ast} \Psi
+\end{equation}
+Using the identity
+
+\begin{equation} \label{eq:12}
+\sum_{i_{1} = 1}^{N} \dots \sum_{i_{N} = 1}^{N}
+\epsilon_{i_{1}, i_{2}, \dots, i_{N}}
+*
+\epsilon_{i_{1}, i_{2}, \dots, i_{N}}
+=
+N!
+\end{equation}
+we can simplify $\Psi^{\ast} \Psi$:
+
+\begin{equation} \label{eq:13}
+\Psi^{\ast} \Psi
+=
+\frac{1}{\sqrt{N!}} \frac{1}{\sqrt{N!}}
+\sum_{i_{1} = 1}^{N} \dots \sum_{i_{N} = 1}^{N}
+\epsilon_{i_{1}, i_{2}, \dots, i_{N}} \epsilon_{i_{1}, i_{2}, \dots, i_{N}}
+\left| \varphi_{i_{1}} \left( \boldsymbol{r}_{1}, s_{1} \right) \right|^{2}
+\dots
+\left| \varphi_{i_{N}} \left( \boldsymbol{r}_{N}, s_{N} \right) \right|^{2}
+\end{equation}
+\begin{equation} \label{eq:14}
+\Psi^{\ast} \Psi
+=
+\cancel{\frac{N!}{N!}}
+\left| \varphi \left( \boldsymbol{r}_{1}, s_{1} \right) \right|^{2}
+\dots
+\left| \varphi \left( \boldsymbol{r}_{N}, s_{N} \right) \right|^{2}
+\end{equation}
+Substituting back into the equation (\ref{eq:11}):
+
+\begin{equation} \label{eq:15}
+\Braket{\Psi | \Psi}
+=
+\sum_{s_{1}} \dots \sum_{s_{N}} \int \dots \int dr^{3}_{1} \dots dr^{3}_{N}
+\left| \varphi \left( \boldsymbol{r}_{1}, s_{1} \right) \right|^{2}
+\dots
+\left| \varphi \left( \boldsymbol{r}_{N}, s_{N} \right) \right|^{2}
+\end{equation}
+Summing all deltas in equation (\ref{eq:10}), we get the following form:
+
+\begin{equation}
+\Braket{\hat{\varrho} \left( \boldsymbol{r}, s \right)}_{\Psi}
+=
+\sum_{i\ =\ 1}^{N} \delta \left( \boldsymbol{r} - \boldsymbol{r}_{i} \right) \delta_{s,s_{i}}
+\sum_{s_{1}} \dots \sum_{s_{N}} \int \dots \int dr^{3}_{1} \dots dr^{3}_{N}
+\left| \varphi \left( \boldsymbol{r}_{1}, s_{1} \right) \right|^{2}
+\dots
+\left| \varphi \left( \boldsymbol{r}_{N}, s_{N} \right) \right|^{2}
+\end{equation}
+\begin{equation}
+\Braket{\hat{\varrho} \left( \boldsymbol{r}, s \right)}_{\Psi}
+=
+N*
+\sum_{s_{2}} \dots \sum_{s_{N}} \int \dots \int dr^{3}_{2} \dots dr^{3}_{N}
+\left| \varphi \left( \boldsymbol{r}, s \right) \right|^{2}
+\left| \varphi \left( \boldsymbol{r}_{2}, s_{2} \right) \right|^{2}
+\dots
+\left| \varphi \left( \boldsymbol{r}_{N}, s_{N} \right) \right|^{2}
+\end{equation}
+Which is really the same form, we've derived on the practice.

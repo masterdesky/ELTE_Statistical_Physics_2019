@@ -1,0 +1,62 @@
+\section*{Problem 3.}
+\subsection*{Question}
+Show that for a pure n-particle fermionic state (given by a single Slater-determinant in first quantization)
+
+\begin{equation}
+P \left( \boldsymbol{r}, s, \boldsymbol{r'}, s' \right)
+=
+\varrho \left( \boldsymbol{r}, s \right) * \varrho \left( \boldsymbol{r'}, s' \right)
+-
+\left| \varrho \left( \boldsymbol{r}, s, \boldsymbol{r'}, s' \right) \right|^{2}
+\end{equation}
+where $\varrho \left( \boldsymbol{r}, s \right)$ is the spin dependent density and $\varrho \left( \boldsymbol{r}, s, \boldsymbol{r'}, s' \right)$ is the density matrix.
+
+\subsection*{Solution}
+On the course we've seen, that the pair distribution function is the following:
+
+\begin{equation}
+P \left( \boldsymbol{r}, s, \boldsymbol{r'}, s' \right)
+=
+\Psi^{\dagger} \left( \boldsymbol{r}, s \right)
+\Psi^{\dagger} \left( \boldsymbol{r'}, s' \right)
+\Psi \left( \boldsymbol{r}, s \right)
+\Psi \left( \boldsymbol{r'}, s' \right)
+\end{equation}
+We also derived, the spin-dependent density operator is the following:
+
+\begin{equation}
+\varrho \left( \boldsymbol{r}, s \right)
+=
+\Psi^{\dagger} \left( \boldsymbol{r}, s \right)
+\Psi \left( \boldsymbol{r}, s \right)
+\end{equation}
+\begin{equation}
+\varrho \left( \boldsymbol{r'}, s' \right)
+=
+\Psi^{\dagger} \left( \boldsymbol{r'}, s' \right)
+\Psi \left( \boldsymbol{r'}, s' \right)
+\end{equation}
+It is also the diagonal of the density matrix which could be written in the following form:
+
+\begin{equation}
+\varrho \left( \boldsymbol{r}, s, \boldsymbol{r'}, s' \right)
+=
+N \sum_{s_{2}} \dots \sum_{s_{n}}
+\int d^{3} r_{2} \dots d^{3} r_{n}
+\Psi^{\ast} \left( \boldsymbol{r_{1}}, s_{1}, \dots \right) * \Psi \left( \boldsymbol{r_{1}}, s_{1}, \dots \right)
+\end{equation}
+\begin{equation}
+\text{diag} \left[ \varrho \left( \boldsymbol{r}, s, \boldsymbol{r'}, s' \right) \right]
+=
+\varrho \left( \boldsymbol{r}, s, \boldsymbol{r'} = \boldsymbol{r}, s' = s \right)
+=
+\varrho \left( \boldsymbol{r}, s \right)
+\end{equation}
+The absolute value of a positive operator, like $\varrho \left( \boldsymbol{r}, s, \boldsymbol{r'}, s' \right)$ is well-defined and is the following:
+
+\begin{equation}
+\left| \varrho \left( \boldsymbol{r}, s, \boldsymbol{r'}, s' \right) \right|
+=
+\sqrt{\varrho \left( \boldsymbol{r}, s, \boldsymbol{r'}, s' \right) * \varrho \left( \boldsymbol{r}, s, \boldsymbol{r'}, s' \right)}
+\end{equation}
+which positive square root exist.
