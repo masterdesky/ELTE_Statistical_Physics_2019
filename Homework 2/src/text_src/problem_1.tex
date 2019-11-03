@@ -1,0 +1,152 @@
+\section*{Problem 1.}
+\subsection*{Question}
+Using the second quantized formalism show that for non-interacting fermions
+
+\begin{equation*}
+\Omega_{0}^{F}
+=
+- k_{B} T \sum_{i} \ln \left( 1 + e^{-\beta \left( \epsilon_{i} - \mu \right)} \right)
+\end{equation*}
+where $\epsilon_{i}$ denotes the $i$-th one-particle level.
+
+\subsection*{Solution}
+On the lecture using the second quantization we derived, that for non-interacting bosons the grand-canonical potential is
+
+\begin{equation} \label{eq:1}
+\Omega_{0}^{B}
+=
+k_{B} T \sum_{i} \ln \left( 1 - e^{-\beta \left( \epsilon_{i} - \mu \right)} \right)
+\end{equation}
+We know, that the grand-canonical partition function at fixed $T$ and $\mu$ is
+
+\begin{equation} \label{eq:2}
+Z_{0}
+=
+e^{-\beta \Omega_{0}^{F,B}}
+=
+Tr \left( e^{-\beta \hat{K}_{0}} \right)
+\end{equation}
+where
+
+\begin{equation} \label{eq:3}
+\hat{K}_{0}
+=
+\hat{H} - \mu \hat{N}
+\equiv
+\sum_{k,s} \left( \epsilon_{k} - \mu \right) a_{k,s}^{\dagger} a_{k,s}
+\end{equation}
+Here, $\epsilon_{k}$ is the 1 particle kinetic energy of the $k$-th particle and the Hamiltonian $\hat{H} = \sum_{k,s} \epsilon_{k} a_{k,s}^{\dagger} a_{k,s}$. We can expand equation (\ref{eq:2}) in the second quantization in the following way:
+
+\begin{equation} \label{eq:4}
+Z_{0}
+=
+\sum_{n_{1}} \sum_{n_{2}} \dots
+\Braket{n_{1}, n_{2} \dots|e^{-\beta \sum_{k,s} \left( \epsilon_{k} - \mu \right) a_{k,s}^{\dagger} a_{k,s}}|n_{1}, n_{2} \dots}
+\end{equation}
+The operator inside the sandwich could be expanded into the product
+
+\begin{equation} \label{eq:5}
+e^{-\beta \sum_{k,s} \left( \epsilon_{k} - \mu \right) a_{k,s}^{\dagger} a_{k,s}}
+=
+e^{-\beta \left( \epsilon_{1} - \mu \right) a_{1}^{\dagger} a_{1}}
+*
+e^{-\beta \left( \epsilon_{2} - \mu \right) a_{2}^{\dagger} a_{2}}
+*
+\dots
+\ .
+\end{equation}
+Using this, the equation (\ref{eq:4}) could be further expanded into another product:
+
+\begin{equation} \label{eq:6}
+Z_{0}
+=
+\left( \sum_{n_{1}\ =\ 0}^{\infty} \Braket{n_{1}|e^{-\beta \left( \epsilon_{1} - \mu \right) a_{1}^{\dagger} a_{1}}|n_{1}} \right)
+*
+\left( \sum_{n_{2}\ =\ 0}^{\infty} \Braket{n_{2}|e^{-\beta \left( \epsilon_{2} - \mu \right) a_{2}^{\dagger} a_{2}}|n_{2}} \right)
+*
+\dots
+\end{equation}
+Since $a^{\dagger}_{k} a_{k} = n_{k}$, therefore the exponents could be rewritten in the following form:
+\begin{equation} \label{eq:7}
+Z_{0}
+=
+\left( \sum_{n_{1}\ =\ 0}^{\infty} \Braket{n_{1}|e^{-\beta \left( \epsilon_{1} - \mu \right) n_{1}}|n_{1}} \right)
+*
+\left( \sum_{n_{2}\ =\ 0}^{\infty} \Braket{n_{2}|e^{-\beta \left( \epsilon_{2} - \mu \right) n_{2}}|n_{2}} \right)
+*
+\dots
+\end{equation}
+The operators could be multiply out from the sandwiches:
+
+\begin{equation} \label{eq:8}
+\Braket{n_{k}|e^{-\beta \left( \epsilon_{k} - \mu \right) n_{k}}|n_{k}}
+=
+e^{-\beta \left( \epsilon_{k} - \mu \right) n_{k}} \underbrace{\Braket{n_{k}|n_{k}}}_{=1}
+\end{equation}
+Thus equation (\ref{eq:7}) could be rewritten into the form of a product of sum of exponentials
+
+\begin{equation} \label{eq:9}
+Z_{0}
+=
+\prod_{k\ =\ 1}^{\infty}
+\left(
+\sum_{n_{k}\ =\ 0}^{\infty} e^{-\beta \left( \epsilon_{k} - \mu \right) n_{k}}
+\right)
+\ .
+\end{equation}
+The $n_{k}$ occupation number can take the following values:
+
+\begin{equation*}
+n_{k}
+=
+\begin{cases}
+0,1 & \text{for fermions} \\
+0,1,2,\dots & \text{for bosons}
+\end{cases}
+\end{equation*}
+Since our task is to derive the $\Omega_{0}$ for fermions, we use the first fermionic case here, $n_{k} \in \left\{ 0,1 \right\}$. With this, the equation (\ref{eq:9}) could be rephrased in the following way:
+
+\begin{equation} \label{eq:10}
+Z_{0}
+=
+\prod_{k\ =\ 1}^{\infty}
+\left(
+\sum_{n_{k}\ =\ 0}^{1} e^{-\beta \left( \epsilon_{k} - \mu \right) n_{k}}
+\right)
+=
+\prod_{k\ =\ 1}^{\infty}
+\left(
+e^{-\beta \left( \epsilon_{k} - \mu \right) * 0}
++
+e^{-\beta \left( \epsilon_{k} - \mu \right) * 1}
+\right)
+=
+\prod_{k\ =\ 1}^{\infty}
+\left(
+1
++
+e^{-\beta \left( \epsilon_{k} - \mu \right)}
+\right)
+\end{equation}
+Substituting back to equation (\ref{eq:2}), $\Omega_{0}^{F,B}$ could be expressed with
+
+\begin{equation}
+\Omega_{0}^{F,B}
+=
+- \frac{1}{\beta} \ln \left( Z_{0} \right)
+\end{equation}
+\begin{equation}
+\Omega_{0}^{F}
+=
+-k_{B} T \ln \left(
+\prod_{k\ =\ 1}^{\infty}
+\left(
+1
++
+e^{-\beta \left( \epsilon_{k} - \mu \right)}
+\right)
+\right)
+=
+-k_{B} T \sum_{k\ =\ 0}^{\infty} \ln \left( 1 + e^{-\beta \left( \epsilon_{k} - \mu \right)} \right)
+\end{equation}
+Thus we've reached to our goal.
