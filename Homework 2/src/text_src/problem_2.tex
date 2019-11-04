@@ -6,7 +6,7 @@ Using the result for $\Omega_{0}$ calculate $\Omega_{0}$ and $N$ as a function o
 In the previous task, we derived that for free, non-interacting fermions the grand canonical potential is
 
 \begin{equation} \label{eq:13}
-\Omega_{0} \left( T, V, \mu \right)
+\Omega_{0}^{F} \left( T, V, \mu \right)
 =
 -k_{B} T \sum_{k} \ln \left( 1 + e^{-\beta \left( \epsilon_{k} - \mu \right)} \right).
 \end{equation}
@@ -15,7 +15,15 @@ The particle number could be expressed using this potential as the following:
 \begin{equation} \label{eq:14}
 N
 =
-- \left. \frac{\partial \Omega_{0}}{\partial \mu} \right|_{T,V}
+- \left. \frac{\partial \Omega_{0}^{F}}{\partial \mu} \right|_{T,V}
 =
 k_{B} T \frac{\partial}{\partial \mu} \left( \sum_{k} \ln \left( 1 + e^{-\beta \left( \epsilon_{k} - \mu \right)} \right) \right)
+\end{equation}
+Now we need to express the fermionic grand canonical potential $\Omega_{0}^{F}$ for enclosed fermions, using Fermi-Dirac integrals. \par
+The Fermi-Dirac integrals could be derived from the distribution of the half-integer spin particles and is defined as the following:
+
+\begin{equation}
+\mathcal{F} \left( s, \alpha \right)
+=
+\frac{1}{\Gamma \left( s \right)} \int_{0}^{\infty} \frac{x^{s-1}}{e^{x + \alpha} + 1}\,dx
 \end{equation}
