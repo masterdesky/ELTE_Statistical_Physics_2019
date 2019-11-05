@@ -15,13 +15,99 @@ z \frac{\hbar^{2}}{2m} \left( \frac{N}{V} \right)^{2/3}
 where $z$ is a dimensionless number. Calculate this number $z$ exactly and numerically.
 
 \subsection*{Solution}
-Let us denote $T_{\text{deg}}$ as $T_{\text{c}}$ from now on. The value of $z$ could be expressed by simple reordering of the equation:
+At hight temperature the chemical potential is negative, but for lower temperature its sign changes. There will be a certain $T_{\text{deg}}$ temperature, where it is zero. It could be concluded \citep{Lee1990}, that for non-interacting fermions, this characteristic temperature could be expressed as follows:
+
+\begin{equation} \label{eq:16}
+\Gamma \left( 1 + D/2 \right) * \left( \frac{\mu_{0}}{k_{B} T_{\text{deg}}} \right)^{D/2}
+=
+\left( 1 - 2^{1 - D/2} \right) \zeta \left( D/2 \right)
+\end{equation}
+Where $\Gamma$ is the gamma function, $\zeta$ is the Riemann zeta function, $D$ is the dimension number (here, $D := 3$) and $\mu_{0}$ is the chemical potential at $T=0$. For $D=3$ the above equation could be rephrased in the following way:
+\begin{equation} \label{eq:17}
+\Gamma \left( 5/2 \right) * \left( \frac{\mu_{0}}{k_{B} T_{\text{deg}}} \right)^{3/2}
+=
+\left( 1 - 2^{- 1/2} \right) \zeta \left( 3/2 \right)
+\end{equation}
+\begin{equation} \label{eq:18}
+\frac{3 \sqrt{\pi}}{4} * \left( \frac{\mu_{0}}{k_{B} T_{\text{deg}}} \right)^{3/2}
+=
+\left( 1 - \frac{1}{\sqrt{2}} \right) \left( \frac{2}{\sqrt{\pi}} \int_{0}^{\infty} \frac{\sqrt{t}}{e^{t} - 1}\,dt \right)
+\end{equation}
+\begin{equation} \label{eq:19}
+\left( \frac{\mu_{0}}{k_{B} T_{\text{deg}}} \right)^{3/2}
+=
+\underbrace{
+\frac{8}{3 \pi} \left( 1 - \frac{1}{\sqrt{2}} \right) \left( \int_{0}^{\infty} \frac{\sqrt{t}}{e^{t} - 1}\,dt \right)
+}_{> 0}
+\end{equation}
+\begin{equation} \label{eq:20}
+\frac{\mu_{0}}{k_{B} T_{\text{deg}}}
+=
+\frac{1}{
+\left(
+\frac{8}{3 \pi} \left( 1 - \frac{1}{\sqrt{2}} \right) \left( \int_{0}^{\infty} \frac{\sqrt{t}}{e^{t} - 1}\,dt \right)
+\right)^{2/3}
+}
+\end{equation}
+\begin{equation} \label{eq:21}
+T_{\text{deg}}
+=
+\frac{\mu_{0}}{k_{B}}
+\left(
+\frac{8}{3 \pi} \left( 1 - \frac{1}{\sqrt{2}} \right) \left( \int_{0}^{\infty} \frac{\sqrt{t}}{e^{t} - 1}\,dt \right)
+\right)^{2/3}
+\end{equation}
+The value of $z$ could be expressed by simple reordering of the equation in the task description:
+
+\begin{equation} \label{eq:22}
+z
+=
+\frac{k_{B} T_{\text{deg}}}{\frac{\hbar^{2}}{2m} \left( \frac{N}{V} \right)^{2/3}}
+=
+\frac{k_{B} T_{\text{deg}} 2m}{\hbar^{2}}
+\left( \frac{N}{V} \right)^{-2/3}
+\end{equation}
+Substituting the derived formula for $T_{\text{deg}}$, the $k_{B}$ factor cancels out:
+
+\begin{equation} \label{eq:23}
+z
+=
+\frac{2m \mu_{0}}{\hbar^{2}}
+\left(
+\frac{8}{3 \pi} \left( 1 - \frac{1}{\sqrt{2}} \right) \left( \int_{0}^{\infty} \frac{\sqrt{t}}{e^{t} - 1}\,dt \right)
+\right)^{2/3}
+\left( \frac{N}{V} \right)^{-2/3}
+\end{equation}
+At zero temperature the chemical potential is equals to the Fermi energy ($E_{F}$), which could be expressed for non-interacting half-integer spin particles as follows \citep{Glyde2014}:
+\begin{equation}
+\mu_{0}
+=
+E_{F}
+=
+\frac{\hbar^{2}}{2m} \left( 3 \pi^{2} \right)^{2/3} \left( \frac{N}{V} \right)^{2/3}
+\end{equation}
+Substituting back to the previous equation, we get the form
 
 \begin{equation}
 z
 =
-\frac{k_{B} T_{\text{c}}}{\frac{\hbar^{2}}{2m} \left( \frac{N}{V} \right)^{2/3}}
+\frac{2m}{\hbar^{2}} \left( \frac{N}{V} \right)^{-2/3} * \frac{\hbar^{2}}{2m} \left( 3 \pi^{2} \right)^{2/3} \left( \frac{N}{V} \right)^{2/3}
+\left(
+\frac{8}{3 \pi} \left( 1 - \frac{1}{\sqrt{2}} \right) \left( \int_{0}^{\infty} \frac{\sqrt{t}}{e^{t} - 1}\,dt \right)
+\right)^{2/3}
+\end{equation}
+\begin{equation}
+z
 =
-\frac{k_{B} T_{\text{c}} 2m}{\hbar^{2}}
-\left( \frac{N}{V} \right)^{-2/3}
+\left( 3 \pi^{2} \right)^{2/3}
+\left(
+\frac{8}{3 \pi} \left( 1 - \frac{1}{\sqrt{2}} \right) \left( \int_{0}^{\infty} \frac{\sqrt{t}}{e^{t} - 1}\,dt \right)
+\right)^{2/3}
+\end{equation}
+Which is an exact value. It could be approximated
+
+\begin{equation}
+z
+\approx
+6.62246...
 \end{equation}
