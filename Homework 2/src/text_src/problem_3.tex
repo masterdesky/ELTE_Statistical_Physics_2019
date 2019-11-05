@@ -2,16 +2,26 @@
 \subsection*{Question}
 For non-interacting fermions one can define a characteristic temperature $T_{\text{deg}}$ by that temperature where the chemical potential is equal to zero:
 
-\begin{equation}
+\begin{equation*}
 \mu \left( T = T_{\text{deg}} \right) = 0.
-\end{equation}
+\end{equation*}
 By dimensional analysis
 
-\begin{equation}
+\begin{equation*}
 k_{B} T_{\text{deg}}
 =
 z \frac{\hbar^{2}}{2m} \left( \frac{N}{V} \right)^{2/3}
-\end{equation}
+\end{equation*}
 where $z$ is a dimensionless number. Calculate this number $z$ exactly and numerically.
 
 \subsection*{Solution}
+Let us denote $T_{\text{deg}}$ as $T_{\text{c}}$ from now on. The value of $z$ could be expressed by simple reordering of the equation:
+
+\begin{equation}
+z
+=
+\frac{k_{B} T_{\text{c}}}{\frac{\hbar^{2}}{2m} \left( \frac{N}{V} \right)^{2/3}}
+=
+\frac{k_{B} T_{\text{c}} 2m}{\hbar^{2}}
+\left( \frac{N}{V} \right)^{-2/3}
+\end{equation}
