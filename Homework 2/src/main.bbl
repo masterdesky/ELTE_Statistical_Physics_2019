@@ -30,12 +30,15 @@
     \strng{fullhash}{WEW1}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
+    \field{labelyear}{1999}
+    \field{labeldatesource}{year}
     \field{note}{[Online. Retrieved on 06.11.2019]}
     \field{title}{Fermi-Dirac Distribution. {From MathWorld---A Wolfram Web
   Resource}}
     \verb{url}
     \verb http://mathworld.wolfram.com/Fermi-DiracDistribution.html
     \endverb
+    \field{year}{1999}
   \endentry
 
   \entry{Lee1990}{article}{}
