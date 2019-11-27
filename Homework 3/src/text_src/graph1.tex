@@ -1,0 +1,31 @@
+\subsection*{Graph 1. --- Frequency space}
+
+\begin{center}
+\begin{tikzpicture}
+  \begin{feynman}
+    \vertex (a1);
+    \vertex[right=1.5cm of a1] (a2);
+    \vertex[right=1.5cm of a2] (a3);
+    \vertex[right=1.5cm of a3] (a4);
+    \vertex[right=1.5cm of a4] (a5);
+    
+    \vertex[above=1.5cm of a2] (b1);
+    
+    \vertex[above=0.75cm of b1] (c1);
+    \vertex[right=0.75cm of a3] (c2);
+
+    \diagram* {
+      {[edges=fermion]
+        (a5) -- (a4) -- (a3) -- (a2) -- (a1),
+      },
+      (a2) -- [dash pattern=on 4pt off 4pt] (b1),
+
+    };
+    \centerarc[fermion](c1)(0:360:0.75)
+    \centerarc[dash pattern=on 4pt off 4pt](c2)(180:360:0.75)
+
+  \end{feynman}
+\end{tikzpicture}
+\end{center}
+
+\subsection*{Solution}

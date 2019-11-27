@@ -1,0 +1,33 @@
+\subsection*{Graph 6. --- Coordinate space}
+
+\begin{center}
+\begin{tikzpicture}
+  \begin{feynman}
+    \vertex (a1);
+    \vertex[right=1.5cm of a1] (a2);
+    \vertex[right=1.5cm of a2] (a3);
+    
+    \vertex[above=1.5cm of a2] (b1);
+    \vertex[above=1.5cm of b1] (b2);
+    \vertex[above=1.5cm of b2] (b3);
+
+	\vertex[above=0.75cm of b1] (c1);
+	\vertex[above=0.75cm of b3] (c2);
+
+    \diagram* {
+      {[edges=fermion]
+        (a3) -- (a2) -- (a1),
+      },
+      (a2) -- [dash pattern=on 4pt off 4pt] (b1),
+      (b2) -- [dash pattern=on 4pt off 4pt] (b3),
+    };
+    \centerarc[fermion](c1)(90:270:0.75)
+    \centerarc[fermion](c1)(270:450:0.75)
+    
+    \centerarc[fermion](c2)(0:360:0.75)
+
+  \end{feynman}
+\end{tikzpicture}
+\end{center}
+
+\subsection*{Solution}

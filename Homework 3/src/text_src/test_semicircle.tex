@@ -1,0 +1,11 @@
+\begin{tikzpicture}[
+circ/.style={circle, draw, solid, fill=white, inner sep=0.75pt,
+             label=#1,
+             node contents={}
+             },
+every label/.append style = {inner sep=2pt, font=\footnotesize}
+                    ]
+% rest of image
+\draw (0,0) arc (180:0:-1) (0,1);
+
+\end{tikzpicture}
