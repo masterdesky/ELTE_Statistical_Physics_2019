@@ -1,14 +1,14 @@
-\subsection*{Graph 8. --- Coordinate space}
+\subsection*{Graph 8. \coord}
 
 \begin{center}
 \begin{tikzpicture}
   \begin{feynman}
-    \vertex (a1);
-    \vertex[right=1.5cm of a1] (a2);
-    \vertex[right=1.5cm of a2] (a3);
-    \vertex[right=1.5cm of a3] (a4);
-    \vertex[right=1.5cm of a4] (a5);
-    \vertex[right=1.5cm of a5] (a6);
+    \vertex[empty dot] (a1){};
+    \vertex[dot, right=1.5cm of a1] (a2){};
+    \vertex[dot, right=1.5cm of a2] (a3){};
+    \vertex[dot, right=1.5cm of a3] (a4){};
+    \vertex[dot, right=1.5cm of a4] (a5){};
+    \vertex[empty dot, right=1.5cm of a5] (a6){};
     
     \vertex[right=0.75cm of a2] (c1);
     \vertex[right=0.75cm of a4] (c2);

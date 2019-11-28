@@ -1,15 +1,15 @@
-\subsection*{Graph 6. --- Coordinate space}
+\subsection*{Graph 6. \coord}
 
 \begin{center}
 \begin{tikzpicture}
   \begin{feynman}
-    \vertex (a1);
-    \vertex[right=1.5cm of a1] (a2);
-    \vertex[right=1.5cm of a2] (a3);
+    \vertex[empty dot] (a1){};
+    \vertex[dot, right=1.5cm of a1] (a2){};
+    \vertex[empty dot, right=1.5cm of a2] (a3){};
     
-    \vertex[above=1.5cm of a2] (b1);
-    \vertex[above=1.5cm of b1] (b2);
-    \vertex[above=1.5cm of b2] (b3);
+    \vertex[dot, above=1.5cm of a2] (b1){};
+    \vertex[dot, above=1.5cm of b1] (b2){};
+    \vertex[dot, above=1.5cm of b2] (b3){};
 
 	\vertex[above=0.75cm of b1] (c1);
 	\vertex[above=0.75cm of b3] (c2);

@@ -1,4 +1,4 @@
-This is LuaTeX, Version 1.10.1 (MiKTeX 2.9.7140 64-bit)  (format=lualatex 2019.11.27)  28 NOV 2019 00:04
+This is LuaTeX, Version 1.10.1 (MiKTeX 2.9.7140 64-bit)  (format=lualatex 2019.11.27)  28 NOV 2019 13:22
  restricted system commands enabled.
 **main.tex
 (./main.tex
@@ -51,7 +51,7 @@ Inserting `luaotfload.aux.set_capheight' at position 3 in `luaotfload.patch_font
 Inserting `luaotfload.aux.set_xheight' at position 4 in `luaotfload.patch_font'.
 Inserting `luaotfload.rewrite_fontname' at position 5 in `luaotfload.patch_font'
 .
-luaotfload | main : initialization completed in 0.817 seconds
+luaotfload | main : initialization completed in 0.806 seconds
 ("C:/Program Files/MiKTeX 2.9/tex/latex/base/article.cls"
 Document Class: article 2018/09/03 v1.4i Standard LaTeX document class
 ("C:/Program Files/MiKTeX 2.9/tex/latex/base/size11.clo"
@@ -905,7 +905,7 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 28
 )
 \Hy@SectionHShift=\skip50
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 104.
+Package hyperref Info: Option `colorlinks' set `true' on input line 107.
 
 ("C:/Program Files/MiKTeX 2.9/tex/latex/makecell/makecell.sty"
 Package: makecell 2009/08/03 V0.1e Managing of Tab Column Heads and Cells
@@ -1194,11 +1194,11 @@ Package biblatex Info: ... file 'biblatex.cfg' found.
 ("C:/Program Files/MiKTeX 2.9/tex/latex/biblatex/biblatex.cfg"
 File: biblatex.cfg 
 ))
-Package biblatex Info: Redefining '\cite' on input line 135.
-Package biblatex Info: Redefining '\parencite' on input line 149.
-Package biblatex Info: Redefining '\footcite' on input line 163.
-Package biblatex Info: Redefining '\footcitetext' on input line 170.
-Package biblatex Info: Redefining '\textcite' on input line 177.
+Package biblatex Info: Redefining '\cite' on input line 138.
+Package biblatex Info: Redefining '\parencite' on input line 152.
+Package biblatex Info: Redefining '\footcite' on input line 166.
+Package biblatex Info: Redefining '\footcitetext' on input line 173.
+Package biblatex Info: Redefining '\textcite' on input line 180.
 )
 Package biblatex Info: Trying to load language 'magyar'...
 Package biblatex Info: ... file 'magyar.lbx' found.
@@ -1226,24 +1226,24 @@ File: english.lbx 2019/08/31 v3.13a biblatex localization (PK/MW)
 (./main.aux)
 \openout1 = main.aux
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: luatex
@@ -1309,10 +1309,10 @@ Package grfext Info: Graphics extension search list:
 
 Package tikz-feynman Warning: Consider loading TikZ-Feynman with \usepackage[com
 pat=1.1.0]{tikz-feynman} so that you can be warned if TikZ-Feynman changes. on i
-nput line 11.
+nput line 12.
 
 \AtBeginShipoutBox=\box76
-Package hyperref Info: Link coloring ON on input line 11.
+Package hyperref Info: Link coloring ON on input line 12.
 ("C:/Program Files/MiKTeX 2.9/tex/latex/hyperref/nameref.sty"
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 
@@ -1321,9 +1321,9 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count357
 )
-LaTeX Info: Redefining \ref on input line 11.
-LaTeX Info: Redefining \pageref on input line 11.
-LaTeX Info: Redefining \nameref on input line 11.
+LaTeX Info: Redefining \ref on input line 12.
+LaTeX Info: Redefining \pageref on input line 12.
+LaTeX Info: Redefining \nameref on input line 12.
 
 (./main.out) (./main.out)
 \@outlinefile=\write5
@@ -1344,13 +1344,13 @@ Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'main.bbl' not found.
 
 No file main.bbl.
-Package biblatex Info: Reference section=0 on input line 11.
-Package biblatex Info: Reference segment=0 on input line 11.
+Package biblatex Info: Reference section=0 on input line 12.
+Package biblatex Info: Reference segment=0 on input line 12.
 ("C:/Program Files/MiKTeX 2.9/tex/latex/base/article.cls"
 LaTeX Info: Redefining \cal on input line 496.
 LaTeX Info: Redefining \mit on input line 497.
 )
-LaTeX Font Info:    Try loading font information for U+rsfs on input line 14.
+LaTeX Font Info:    Try loading font information for U+rsfs on input line 15.
 
 ("C:/Program Files/MiKTeX 2.9/tex/latex/jknappen/ursfs.fd"
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
@@ -1361,23 +1361,23 @@ Underfull \hbox (badness 10000) in paragraph at lines 2--4
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 20--23
+Underfull \hbox (badness 10000) in paragraph at lines 19--24
 
  []
 
-(./text_src/graph1.tex) (./text_src/graph2.tex [1
+(./text_src/graph1.tex [1
 
 
 {C:/Users/Lordpb/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]) (./text_s
-rc/graph3.tex)
-(./text_src/graph4.tex) (./text_src/graph5.tex) (./text_src/graph6.tex [2])
-(./text_src/graph7.tex) (./text_src/graph8.tex) (./text_src/graph9.tex)
-(./text_src/graph10.tex [3])) [4]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 17.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 17.
+rc/graph2.tex) (./text_src/graph3.tex)
+(./text_src/graph4.tex) (./text_src/graph5.tex [2]) (./text_src/graph6.tex)
+(./text_src/graph7.tex) (./text_src/graph8.tex) (./text_src/graph9.tex [3])
+(./text_src/graph10.tex)) [4]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 18.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 18.
  (./main.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 17.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 17.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 18.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 18.
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 Package logreq Info: Writing requests to 'main.run.xml'.
@@ -1386,28 +1386,29 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 )
 
 Here is how much of LuaTeX's memory you used:
- 35360 strings out of 494305
+ 35364 strings out of 494305
  100000,1144653 words of node,token memory allocated
  573 words of node memory still in use:
    6 hlist, 2 vlist, 2 rule, 1 dir, 2 glue, 4 kern, 1 glyph, 12 attribute, 65 gl
 ue_spec, 8 attribute_list, 2 write nodes
-   avail lists: 1:12,2:6664,3:856,4:28,5:128,6:16,7:2653,8:13,9:418,10:17,11:160
-
- 38432 multiletter control sequences out of 65536+200000
+   avail lists: 1:12,2:8539,3:1307,4:28,5:159,6:15,7:2799,8:13,9:529,10:17,11:21
+4
+ 38436 multiletter control sequences out of 65536+200000
  52 fonts using 3122647 bytes
- 69i,13n,98p,858b,1847s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 69i,13n,98p,858b,1848s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc}<C:/Program Files/MiKT
 eX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fo
 nts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/
 public/amsfonts/cm/cmmib10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/a
 msfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
-/cmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmbx10.pfb><C:/Pro
-gram Files/MiKTeX 2.9/fonts/type1/public/lm/lmbx12.pfb><C:/Program Files/MiKTeX 
-2.9/fonts/type1/public/lm/lmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/pub
-lic/lm/lmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmri10.pfb>
-Output written on main.pdf (4 pages, 172973 bytes).
+/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pf
+b><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmbx10.pfb><C:/Program File
+s/MiKTeX 2.9/fonts/type1/public/lm/lmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts
+/type1/public/lm/lmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lm
+r12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmri10.pfb>
+Output written on main.pdf (4 pages, 185461 bytes).
 
-PDF statistics: 67 PDF objects out of 1000 (max. 8388607)
+PDF statistics: 71 PDF objects out of 1000 (max. 8388607)
  5 named destinations out of 1000 (max. 131072)
  16 words of extra memory for PDF output out of 10000 (max. 100000000)
 
