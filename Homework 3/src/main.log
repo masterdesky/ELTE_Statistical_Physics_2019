@@ -1,4 +1,4 @@
-This is LuaTeX, Version 1.10.1 (MiKTeX 2.9.7140 64-bit)  (format=lualatex 2019.11.27)  28 NOV 2019 13:22
+This is LuaTeX, Version 1.10.1 (MiKTeX 2.9.7140 64-bit)  (format=lualatex 2019.11.27)  30 NOV 2019 15:27
  restricted system commands enabled.
 **main.tex
 (./main.tex
@@ -51,7 +51,7 @@ Inserting `luaotfload.aux.set_capheight' at position 3 in `luaotfload.patch_font
 Inserting `luaotfload.aux.set_xheight' at position 4 in `luaotfload.patch_font'.
 Inserting `luaotfload.rewrite_fontname' at position 5 in `luaotfload.patch_font'
 .
-luaotfload | main : initialization completed in 0.806 seconds
+luaotfload | main : initialization completed in 0.783 seconds
 ("C:/Program Files/MiKTeX 2.9/tex/latex/base/article.cls"
 Document Class: article 2018/09/03 v1.4i Standard LaTeX document class
 ("C:/Program Files/MiKTeX 2.9/tex/latex/base/size11.clo"
@@ -1365,11 +1365,26 @@ Underfull \hbox (badness 10000) in paragraph at lines 19--24
 
  []
 
-(./text_src/graph1.tex [1
+(./text_src/reducible_graphs.tex
+Overfull \hbox (16.89671pt too wide) in paragraph at lines 138--139
+ [] 
+ []
 
 
-{C:/Users/Lordpb/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]) (./text_s
-rc/graph2.tex) (./text_src/graph3.tex)
+Overfull \vbox (6.1133pt too high) has occurred while \output is active []
+
+
+Overfull \vbox (6.1133pt too high) has occurred while \output is active []
+
+
+Overfull \vbox (0.07748pt too high) has occurred while \output is active []
+
+
+[1
+
+
+{C:/Users/Lordpb/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}])
+(./text_src/graph1.tex) (./text_src/graph2.tex) (./text_src/graph3.tex)
 (./text_src/graph4.tex) (./text_src/graph5.tex [2]) (./text_src/graph6.tex)
 (./text_src/graph7.tex) (./text_src/graph8.tex) (./text_src/graph9.tex [3])
 (./text_src/graph10.tex)) [4]
@@ -1386,16 +1401,16 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 )
 
 Here is how much of LuaTeX's memory you used:
- 35364 strings out of 494305
- 100000,1144653 words of node,token memory allocated
- 573 words of node memory still in use:
-   6 hlist, 2 vlist, 2 rule, 1 dir, 2 glue, 4 kern, 1 glyph, 12 attribute, 65 gl
-ue_spec, 8 attribute_list, 2 write nodes
-   avail lists: 1:12,2:8539,3:1307,4:28,5:159,6:15,7:2799,8:13,9:529,10:17,11:21
-4
- 38436 multiletter control sequences out of 65536+200000
+ 35414 strings out of 494305
+ 125007,1144653 words of node,token memory allocated
+ 588 words of node memory still in use:
+   7 hlist, 2 vlist, 2 rule, 1 dir, 2 glue, 4 kern, 1 glyph, 14 attribute, 65 gl
+ue_spec, 9 attribute_list, 2 write nodes
+   avail lists: 1:20,2:8536,3:3370,4:69,5:261,6:26,7:8388,8:13,9:1566,10:17,11:4
+10
+ 38477 multiletter control sequences out of 65536+200000
  52 fonts using 3122647 bytes
- 69i,13n,98p,858b,1848s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 69i,13n,104p,858b,1924s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc}<C:/Program Files/MiKT
 eX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fo
 nts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/
@@ -1406,7 +1421,7 @@ b><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmbx10.pfb><C:/Program File
 s/MiKTeX 2.9/fonts/type1/public/lm/lmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts
 /type1/public/lm/lmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lm
 r12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmri10.pfb>
-Output written on main.pdf (4 pages, 185461 bytes).
+Output written on main.pdf (4 pages, 187508 bytes).
 
 PDF statistics: 71 PDF objects out of 1000 (max. 8388607)
  5 named destinations out of 1000 (max. 131072)

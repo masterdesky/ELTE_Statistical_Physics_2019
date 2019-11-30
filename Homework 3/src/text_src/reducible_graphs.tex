@@ -1,0 +1,141 @@
+\subsection*{Reducible graphs}
+\begin{multicols}{4}
+
+% GRAPH 1.
+\begin{center}
+\begin{tikzpicture}
+  \begin{feynman}
+    \vertex[empty dot] (a1){};
+    \vertex[dot, right=0.8cm of a1] (a2){};
+    \vertex[dot, right=0.8cm of a2] (a3){};
+    \vertex[dot, right=0.8cm of a3] (a4){};
+    \vertex[empty dot, right=0.8cm of a4] (a5){};
+    
+    \vertex[dot, above=0.8cm of a2] (b1){};
+    
+    \vertex[above=0.4cm of b1] (c1);
+    \vertex[right=0.4cm of a3] (c2);
+    
+    \vertex[above right=0.4cm of a2] (cut1);
+    \vertex[below=1.2cm of cut1] (cut2);
+    \vertex[above right=0.8cm of cut1] (cut3);
+
+    \diagram* {
+      {[edges=fermion]
+        (a5) -- (a4) -- (a3) -- (a2) -- (a1),
+      },
+      (a2) -- [dash pattern=on 4pt off 4pt] (b1),
+      
+      (cut1) -- [red, dash pattern=on 2pt off 2pt, line width=0.25mm] (cut2),
+      (cut1) -- [red, dash pattern=on 2pt off 2pt, line width=0.25mm] (cut3),
+
+    };
+    \centerarc[fermion](c1)(0:360:0.4)
+    \centerarc[dash pattern=on 4pt off 4pt](c2)(180:360:0.4)
+
+  \end{feynman}
+\end{tikzpicture}
+\end{center}
+
+% GRAPH 3.
+\begin{center}
+\begin{tikzpicture}
+  \begin{feynman}
+    \vertex[empty dot] (a1){};
+    \vertex[dot, right=0.8cm of a1] (a2){};
+    \vertex[dot, right=0.8cm of a2] (a3){};
+    \vertex[dot, right=0.8cm of a3] (a4){};
+    \vertex[empty dot, right=0.8cm of a4] (a5){};
+    
+    \vertex[dot, above=0.8cm of a4] (b1){};
+    
+    \vertex[above=0.4cm of b1] (c1);
+    \vertex[right=0.4cm of a2] (c2);
+    
+    \vertex[above right=0.4cm of a3] (cut1);
+    \vertex[below=1.2cm of cut1] (cut2);
+	\vertex[above left=0.9cm of cut1] (cut3);
+
+    \diagram* {
+      {[edges=fermion]
+        (a5) -- (a4) -- (a3) -- (a2) -- (a1),
+      },
+      (a4) -- [dash pattern=on 4pt off 4pt] (b1),
+      
+      (cut1) -- [red, dash pattern=on 2pt off 2pt, line width=0.25mm] (cut2),
+      (cut1) -- [red, dash pattern=on 2pt off 2pt, line width=0.25mm] (cut3),
+
+    };
+    \centerarc[fermion](c1)(0:360:0.4)
+    \centerarc[dash pattern=on 4pt off 4pt](c2)(180:360:0.4)
+
+  \end{feynman}
+\end{tikzpicture}
+\end{center}
+
+% GRAPH 7.
+\begin{center}
+\begin{tikzpicture}
+  \begin{feynman}
+    \vertex[empty dot] (a1){};
+    \vertex[dot, right=0.8cm of a1] (a2){};
+    \vertex[dot, right=1cm of a2] (a3){};
+    \vertex[empty dot, right=0.8cm of a3] (a4){};
+    
+    \vertex[dot, above=0.8cm of a2] (b1){};
+    \vertex[dot, above=0.8cm of a3] (b2){};
+
+	\vertex[above=0.4cm of b1] (c1);
+	\vertex[above=0.4cm of b2] (c2);
+	
+	\vertex[above right=0.7cm of a2] (cut1);
+	\vertex[below=1.2cm of cut1] (cut2);
+
+    \diagram* {
+      {[edges=fermion]
+        (a4) -- (a3) -- (a2) -- (a1),
+      },
+      (a2) -- [dash pattern=on 4pt off 4pt] (b1),
+      (a3) -- [dash pattern=on 4pt off 4pt] (b2),
+      
+      (cut1) -- [red, dash pattern=on 2pt off 2pt, line width=0.25mm] (cut2),
+    };
+    \centerarc[fermion](c1)(0:360:0.4)
+    \centerarc[fermion](c2)(0:360:0.4)
+
+  \end{feynman}
+\end{tikzpicture}
+\end{center}
+
+% GRAPH 8.
+\begin{center}
+\begin{tikzpicture}
+  \begin{feynman}
+    \vertex[empty dot] (a1){};
+    \vertex[dot, right=0.8cm of a1] (a2){};
+    \vertex[dot, right=0.8cm of a2] (a3){};
+    \vertex[dot, right=0.8cm of a3] (a4){};
+    \vertex[dot, right=0.8cm of a4] (a5){};
+    \vertex[empty dot, right=0.8cm of a5] (a6){};
+    
+    \vertex[right=0.4cm of a2] (c1);
+    \vertex[right=0.4cm of a4] (c2);
+    
+    \vertex[below right=0.6cm of a3] (cut1);
+	\vertex[above=1.2cm of cut1] (cut2);
+
+    \diagram* {
+      {[edges=fermion]
+        (a6) -- (a5) -- (a4) -- (a3) -- (a2) -- (a1),
+      },      
+      (cut1) -- [red, dash pattern=on 2pt off 2pt, line width=0.25mm] (cut2),
+
+    };
+    \centerarc[dash pattern=on 4pt off 4pt](c1)(0:180:0.4)
+    \centerarc[dash pattern=on 4pt off 4pt](c2)(0:180:0.4)
+
+  \end{feynman}
+\end{tikzpicture}
+\end{center}
+
+\end{multicols}
