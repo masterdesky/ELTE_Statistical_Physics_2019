@@ -1,4 +1,4 @@
-This is LuaTeX, Version 1.10.1 (MiKTeX 2.9.7140 64-bit)  (format=lualatex 2019.11.27)  30 NOV 2019 15:27
+This is LuaTeX, Version 1.10.1 (MiKTeX 2.9.7140 64-bit)  (format=lualatex 2019.11.27)  9 DEC 2019 21:12
  restricted system commands enabled.
 **main.tex
 (./main.tex
@@ -51,7 +51,7 @@ Inserting `luaotfload.aux.set_capheight' at position 3 in `luaotfload.patch_font
 Inserting `luaotfload.aux.set_xheight' at position 4 in `luaotfload.patch_font'.
 Inserting `luaotfload.rewrite_fontname' at position 5 in `luaotfload.patch_font'
 .
-luaotfload | main : initialization completed in 0.783 seconds
+luaotfload | main : initialization completed in 0.841 seconds
 ("C:/Program Files/MiKTeX 2.9/tex/latex/base/article.cls"
 Document Class: article 2018/09/03 v1.4i Standard LaTeX document class
 ("C:/Program Files/MiKTeX 2.9/tex/latex/base/size11.clo"
@@ -1384,10 +1384,27 @@ Overfull \vbox (0.07748pt too high) has occurred while \output is active []
 
 
 {C:/Users/Lordpb/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}])
-(./text_src/graph1.tex) (./text_src/graph2.tex) (./text_src/graph3.tex)
-(./text_src/graph4.tex) (./text_src/graph5.tex [2]) (./text_src/graph6.tex)
-(./text_src/graph7.tex) (./text_src/graph8.tex) (./text_src/graph9.tex [3])
-(./text_src/graph10.tex)) [4]
+(./text_src/graph1.tex) (./text_src/graph2.tex) (./text_src/graph3.tex [2])
+(./text_src/graph4.tex) (./text_src/graph5.tex
+Overfull \hbox (3.46991pt too wide) in paragraph at lines 28--29
+\T1/lmr/m/n/10.95 Fer-mi-on pro-pa-ga-tor li-nes are buil-ding con-nec-tions be
+t-ween the points $[]$, $[]$, $[]$,
+ []
+
+[3]) (./text_src/graph6.tex) (./text_src/graph7.tex [4]) (./text_src/graph8.tex
+
+Overfull \hbox (3.46991pt too wide) in paragraph at lines 29--30
+\T1/lmr/m/n/10.95 Fer-mi-on pro-pa-ga-tor li-nes are buil-ding con-nec-tions be
+t-ween the points $[]$, $[]$, $[]$,
+ []
+
+) (./text_src/graph9.tex [5]) (./text_src/graph10.tex
+Overfull \hbox (3.46991pt too wide) in paragraph at lines 28--29
+\T1/lmr/m/n/10.95 Fer-mi-on pro-pa-ga-tor li-nes are buil-ding con-nec-tions be
+t-ween the points $[]$, $[]$, $[]$,
+ []
+
+)) [6]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 18.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 18.
  (./main.aux)
@@ -1401,29 +1418,33 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 )
 
 Here is how much of LuaTeX's memory you used:
- 35414 strings out of 494305
+ 36061 strings out of 494305
  125007,1144653 words of node,token memory allocated
- 588 words of node memory still in use:
-   7 hlist, 2 vlist, 2 rule, 1 dir, 2 glue, 4 kern, 1 glyph, 14 attribute, 65 gl
-ue_spec, 9 attribute_list, 2 write nodes
-   avail lists: 1:20,2:8536,3:3370,4:69,5:261,6:26,7:8388,8:13,9:1566,10:17,11:4
-10
- 38477 multiletter control sequences out of 65536+200000
- 52 fonts using 3122647 bytes
- 69i,13n,104p,858b,1924s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 669 words of node memory still in use:
+   7 hlist, 2 vlist, 2 rule, 2 glue, 4 kern, 1 glyph, 43 attribute, 65 glue_spec
+, 23 attribute_list, 2 write nodes
+   avail lists: 1:21,2:14428,3:3370,4:69,5:267,6:27,7:8401,8:80,9:1566,10:16,11:
+416
+ 39104 multiletter control sequences out of 65536+200000
+ 54 fonts using 3288039 bytes
+ 70i,13n,104p,858b,1924s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc}<C:/Program Files/MiKT
-eX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fo
-nts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/
-public/amsfonts/cm/cmmib10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/a
-msfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
-/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pf
-b><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmbx10.pfb><C:/Program File
-s/MiKTeX 2.9/fonts/type1/public/lm/lmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts
-/type1/public/lm/lmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lm
-r12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmri10.pfb>
-Output written on main.pdf (4 pages, 187508 bytes).
+eX 2.9/fonts/type1/public/amsfonts/cmextra/cmbsy8.pfb><C:/Program Files/MiKTeX 2
+.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/
+type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/pub
+lic/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfo
+nts/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmm
+ib10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><
+C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program 
+Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiK
+TeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX 2.9/fo
+nts/type1/public/lm/lmbx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/l
+m/lmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr10.pfb><C:/Pr
+ogram Files/MiKTeX 2.9/fonts/type1/public/lm/lmr12.pfb><C:/Program Files/MiKTeX 
+2.9/fonts/type1/public/lm/lmri10.pfb>
+Output written on main.pdf (6 pages, 255786 bytes).
 
-PDF statistics: 71 PDF objects out of 1000 (max. 8388607)
- 5 named destinations out of 1000 (max. 131072)
+PDF statistics: 113 PDF objects out of 1000 (max. 8388607)
+ 25 named destinations out of 1000 (max. 131072)
  16 words of extra memory for PDF output out of 10000 (max. 100000000)
 

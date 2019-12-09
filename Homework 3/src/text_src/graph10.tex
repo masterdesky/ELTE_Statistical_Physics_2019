@@ -3,12 +3,12 @@
 \begin{center}
 \begin{tikzpicture}
   \begin{feynman}
-    \vertex[empty dot] (a1){};
-    \vertex[dot, right=1.5cm of a1] (a2){};
-    \vertex[dot, right=1.5cm of a2] (a3){};
-    \vertex[dot, right=1.5cm of a3] (a4){};
-    \vertex[dot, right=1.5cm of a4] (a5){};
-    \vertex[empty dot, right=1.5cm of a5] (a6){};
+    \vertex[empty dot, label=below:{$X$}] (a1){};
+    \vertex[dot, right=1.5cm of a1, label=above:{$X_{1}'$}] (a2){};
+    \vertex[dot, right=1.5cm of a2, label=below:{$X_{2}'$}] (a3){};
+    \vertex[dot, right=1.5cm of a3, label=above:{$X_{1}$}] (a4){};
+    \vertex[dot, right=1.5cm of a4, label=below:{$X_{2}$}] (a5){};
+    \vertex[empty dot, right=1.5cm of a5, label=below:{$X'$}] (a6){};
 
     \diagram* {
       {[edges=fermion]
@@ -25,3 +25,62 @@
 \end{center}
 
 \subsection*{Solution}
+Fermion propagator lines are building connections between the points $\left( X' \to X_{2} \right)$, $\left( X_{2} \to X_{1} \right)$, $\left( X_{1} \to X_{2}' \right)$, $\left( X_{2}' \to X_{1}' \right)$ and $\left( X_{1}' \to X \right)$. Their contributions are:
+
+\begin{align}
+- \mathcal{G}_{0} \left( X_{i}, X_{j} \right)
+&\to
+\left[ - \mathcal{G}_{0} \left( X_{2}, X' \right) \right]
+*
+\left[ - \mathcal{G}_{0} \left( X_{1}, X_{2} \right) \right]
+*
+\left[ - \mathcal{G}_{0} \left( X_{2}', X_{1} \right) \right]
+*
+\left[ - \mathcal{G}_{0} \left( X_{1}', X_{2}' \right) \right]
+*
+\left[ - \mathcal{G}_{0} \left( X, X_{1}' \right) \right]
+= \nonumber \\
+&=
+- \mathcal{G}_{0} \left( X_{2}, X' \right)
+*
+\mathcal{G}_{0} \left( X_{1}, X_{2} \right)
+*
+\mathcal{G}_{0} \left( X_{2}', X_{1} \right)
+*
+\mathcal{G}_{0} \left( X_{1}', X_{2}' \right)
+*
+\mathcal{G}_{0} \left( X, X_{1}' \right)
+\end{align}
+Interaction happens between $\left( X_{1}, X_{1}' \right)$ and $\left( X_{2}, X_{2}' \right)$. Their contributions are
+
+\begin{equation}
+- \frac{1}{\hbar} v \left( X_{i} X_{i}' \right)
+\to
+\left( - \frac{1}{\hbar} \right) v \left( X_{1} X_{1}' \right)
+*
+\left( - \frac{1}{\hbar} \right) v \left( X_{2} X_{2}' \right)
+=
+\frac{1}{\hbar^{2}} v \left( X_{1} X_{1}' \right) v \left( X_{2} X_{2}' \right)
+\end{equation}
+Putting them all together, we need to integrate over all the internal $X_{i}$ points to get the final form for the integral of the Green's function:
+
+\begin{align}
+\mathcal{G} \left( X, X' \right)
+&=
+\int \text{d}X_{1} \int \text{d}X_{2} \int \text{d}X_{1}' \int \text{d}X_{2}'
+*
+\frac{1}{\hbar^{2}} v \left( X_{1} X_{1}' \right) v \left( X_{2} X_{2}' \right)
+\times \nonumber \\
+&\times
+\left[
+- \mathcal{G}_{0} \left( X_{2}, X' \right)
+*
+\mathcal{G}_{0} \left( X_{1}, X_{2} \right)
+*
+\mathcal{G}_{0} \left( X_{2}', X_{1} \right)
+*
+\mathcal{G}_{0} \left( X_{1}', X_{2}' \right)
+*
+\mathcal{G}_{0} \left( X, X_{1}' \right)
+\right]
+\end{align}

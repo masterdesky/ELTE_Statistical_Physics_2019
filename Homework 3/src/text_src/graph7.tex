@@ -3,26 +3,35 @@
 \begin{center}
 \begin{tikzpicture}
   \begin{feynman}
-    \vertex[empty dot] (a1){};
-    \vertex[dot, right=1.5cm of a1] (a2){};
-    \vertex[dot, right=1.7cm of a2] (a3){};
-    \vertex[empty dot, right=1.5cm of a3] (a4){};
+    \vertex[empty dot, label=below:{$x$}] (a1){};
+    \vertex[dot, right=2cm of a1, label=below:{$x_{1}$}] (a2){};
+    \vertex[dot, right=2.2cm of a2, label=below:{$x_{2}$}] (a3){};
+    \vertex[empty dot, right=2cm of a3, label=below:{$x'$}] (a4){};
     
-    \vertex[dot, above=1.5cm of a2] (b1){};
-    \vertex[dot, above=1.5cm of a3] (b2){};
+    \vertex[dot, above=2cm of a2, label=above:{$x_{1}'$}] (b1){};
+    \vertex[dot, above=2cm of a3, label=above:{$x_{2}'$}] (b2){};
+    
+    \vertex[above=2cm of b1] (b3);
+    \vertex[above=2cm of b2] (b4);
 
-	\vertex[above=0.75cm of b1] (c1);
-	\vertex[above=0.75cm of b2] (c2);
+	\vertex[above=1cm of b1] (c1);
+	\vertex[above=1cm of b2] (c2);
 
     \diagram* {
       {[edges=fermion]
-        (a4) -- (a3) -- (a2) -- (a1),
+        (a4) -- [momentum=$\boldsymbol{k}; i \nu_{n}$] (a3),
+        (a3) -- [momentum=$\boldsymbol{q}; i \nu_{m}$] (a2),
+        (a2) -- [momentum=$\boldsymbol{k}; i \nu_{n}$] (a1),
       },
-      (a2) -- [dash pattern=on 4pt off 4pt] (b1),
-      (a3) -- [dash pattern=on 4pt off 4pt] (b2),
+      (a2) -- [rmomentum=$\boldsymbol{0}; 0$, dash pattern=on 4pt off 4pt] (b1),
+      (a3) -- [rmomentum'=$\boldsymbol{0}; 0$, dash pattern=on 4pt off 4pt] (b2),
+      (b1) -- [half right, looseness=1.6, in=-95, out=-85] (b3),
+      (b3) -- [momentum'=$\boldsymbol{k}'; i \nu_{n}'$, half right, looseness=1.6, in=-95, out=-85, fermion] (b1),
+      (b2) -- [momentum'=$\boldsymbol{k}''; i \nu_{n}''$, half right, looseness=1.6, in=-95, out=-85] (b4),
+      (b4) -- [half right, looseness=1.6, in=-95, out=-85, fermion] (b2),
     };
-    \centerarc[fermion](c1)(0:360:0.75)
-    \centerarc[fermion](c2)(0:360:0.75)
+    %\centerarc[fermion](c1)(0:360:1)
+    %\centerarc[fermion](c2)(0:360:1)
 
   \end{feynman}
 \end{tikzpicture}

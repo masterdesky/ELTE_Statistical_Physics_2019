@@ -3,26 +3,31 @@
 \begin{center}
 \begin{tikzpicture}
   \begin{feynman}
-    \vertex[empty dot] (a1){};
-    \vertex[dot, right=1.5cm of a1] (a2){};
-    \vertex[dot, right=1.5cm of a2] (a3){};
-    \vertex[dot, right=1.5cm of a3] (a4){};
-    \vertex[empty dot, right=1.5cm of a4] (a5){};
+    \vertex[empty dot, label=below:{$x$}] (a1){};
+    \vertex[dot, right=2cm of a1, label=below:{$x_{1}$}] (a2){};
+    \vertex[dot, right=2cm of a2, label=above:{$x_{2}'$}] (a3){};
+    \vertex[dot, right=2cm of a3, label=above:{$x_{2}$}] (a4){};
+    \vertex[empty dot, right=2cm of a4, label=below:{$x'$}] (a5){};
     
-    \vertex[dot, above=1.5cm of a2] (b1){};
+    \vertex[dot, above=1.5cm of a2, label=above:{$x_{1}'$}] (b1){};
+    \vertex[above=1.5cm of b1] (b2);
     
     \vertex[above=0.75cm of b1] (c1);
-    \vertex[right=0.75cm of a3] (c2);
+    \vertex[right=1cm of a3] (c2);
 
     \diagram* {
       {[edges=fermion]
-        (a5) -- (a4) -- (a3) -- (a2) -- (a1),
+        (a5) -- [momentum=$\boldsymbol{k}; i \nu_{n}$] (a4),
+        (a4) -- [momentum'=$\boldsymbol{q}; i \nu_{m}$] (a3),
+        (a3) -- [momentum=$\boldsymbol{k}; i \nu_{n}$] (a2),
+        (a2) -- [momentum=$\boldsymbol{k}; i \nu_{n}$] (a1),
       },
-      (a2) -- [dash pattern=on 4pt off 4pt] (b1),
-
+      (a2) -- [rmomentum=$\boldsymbol{0}; 0$, dash pattern=on 4pt off 4pt] (b1),
+      (a4) -- [rmomentum'=$\boldsymbol{q}-\boldsymbol{k}$, edge label=$i \nu_{m} - i \nu_{n}$, half left, dash pattern=on 4pt off 4pt] (a3),
+      (b1) -- [half right, looseness=1.65, in=-95, out=-85] (b2),
+      (b2) -- [momentum'=$\boldsymbol{q'}; i \nu_{m}'$, half right, looseness=1.65, in=-95, out=-85, fermion] (b1),
     };
-    \centerarc[fermion](c1)(0:360:0.75)
-    \centerarc[dash pattern=on 4pt off 4pt](c2)(180:360:0.75)
+    %\centerarc[fermion](c1)(0:360:0.75)
 
   \end{feynman}
 \end{tikzpicture}
