@@ -32,3 +32,100 @@
 \end{center}
 
 \subsection*{Solution}
+Fermion propagator lines are building connections between the points $\left( x' \to x_{2} \right)$, $\left( x_{2} \to x_{1} \right)$, $\left( x_{1} \to x \right)$, $\left( x_{1} \to x_{1}' \right)$, $\left( x_{1}' \to x_{2}' \right)$ and $\left( x_{2}' \to x_{1}' \right)$, where the last two forms a fermion loop. Their contributions are:
+
+\begin{equation} \label{eq:24}
+- \mathcal{G}_{0} \left( \boldsymbol{k}; i \nu_{n} \right)
+=
+- \frac{1}{i \nu_{n} - \frac{1}{\hbar} \left( \varepsilon_{\boldsymbol{k}} - \mu \right)}
+\end{equation}
+Using this relation, the contribution of fermion propagator lines in this graph are the following:
+
+\begin{align} \label{eq:25}
+\mathcal{G}_{F}
+&=
+\left[ - \mathcal{G}_{0} \left( \boldsymbol{k}; i \nu_{n} \right) \right]
+*
+\left[ - \mathcal{G}_{0} \left( \boldsymbol{q}; i \nu_{m} \right) \right]
+*
+\left[ - \mathcal{G}_{0} \left( \boldsymbol{k}; i \nu_{n} \right) \right]
+*
+\left[ - \mathcal{G}_{0} \left( \boldsymbol{q}; i \nu_{m} \right) \right]
+*
+\left[ - \mathcal{G}_{0} \left( \boldsymbol{k}; i \nu_{n} \right) \right]
+= \nonumber \\
+&=
+- \left[ \mathcal{G}_{0} \left( \boldsymbol{k}; i \nu_{n} \right) \right]^{3}
+*
+\left[ \mathcal{G}_{0} \left( \boldsymbol{q}; i \nu_{m} \right) \right]^{2}
+\end{align}
+Which could be expressed as follows according to Eq. (\ref{eq:24}):
+
+\begin{equation} \label{eq:26}
+\mathcal{G}_{F}
+=
+- \left[
+\frac{1}{i \nu_{n} - \frac{1}{\hbar} \left( \varepsilon_{\boldsymbol{k}} - \mu \right)}
+\right]^{3}
+*
+\left[
+\frac{1}{i \nu_{m} - \frac{1}{\hbar} \left( \varepsilon_{\boldsymbol{q}} - \mu \right)}
+\right]^{2}
+\end{equation}
+All contribution from $\mathcal{G}_{0} \left( \boldsymbol{k}; i \nu_{n} \right)$ propagators should be multiplied by the factor $e^{i \nu_{n} \eta}$, if the propagator line is a closed loop itself, or whether its endpoints are connected with an interaction line. Here none of them nodes are subjects to this condition, so we should leave this contribution as it is. \par
+Interaction lines running between the points $\left( x_{1}, x_{1}' \right)$ and $\left( x_{2}, x_{2}' \right)$. The contribution from an ($\boldsymbol{k}; i \nu_{n}$) interaction line is frequency-independent and is the following:
+
+\begin{equation} \label{eq:27}
+\mathcal{G}_{I} \left( \boldsymbol{k}; i \nu_{n} \right)
+=
+- \frac{1}{\hbar} v \left( \boldsymbol{k} \right)
+\end{equation}
+Using this relation the total contribution of interaction lines in this graph is
+
+\begin{equation} \label{eq:28}
+\mathcal{G}_{I}
+=
+\left[ - \frac{1}{\hbar} v \left( \boldsymbol{q} - \boldsymbol{k} \right) \right]
+*
+\left[ - \frac{1}{\hbar} v \left( \boldsymbol{k} - \boldsymbol{q} \right) \right]
+=
+\frac{1}{\hbar^{2}} v \left( \boldsymbol{q} - \boldsymbol{k} \right) v \left( \boldsymbol{k} - \boldsymbol{q} \right)
+\end{equation}
+To put everything together, we need to sum over all independent frequencies and momentums:
+
+\begin{equation} \label{eq:29}
+\mathcal{G} \left( \boldsymbol{k}; i \nu_{n} \right)
+=
+\frac{1}{\beta \hbar} \sum_{i \nu_{n}}
+\frac{1}{\beta \hbar} \sum_{i \nu_{m}}
+\frac{1}{V} \sum_{\boldsymbol{k}}
+\frac{1}{V} \sum_{\boldsymbol{q}}
+\mathcal{G}_{F} * \mathcal{G}_{I}
+=
+\frac{1}{\beta^{2} \hbar^{2}} \frac{1}{V^{2}}
+\sum_{i \nu_{n}}
+\sum_{i \nu_{m}}
+\sum_{\boldsymbol{k}}
+\sum_{\boldsymbol{q}}
+\mathcal{G}_{F} * \mathcal{G}_{I}
+\end{equation}
+Finally this contribution should be multiplied by another factor, which is the contribution of the propagator loops itself:
+
+\begin{equation} \label{eq:30}
+\mathcal{G}_{L}
+=
+\left[ \pm \left( 2s + 1 \right) \right]^{L}
+\end{equation}
+Where $L$ is the number of propagator loops. Since there are only one propagator loop ($x_{1}' \to x_{2}' \to x_{1}'$), $L = 1$. Thus the final Green's function is the following:
+
+\begin{equation} \label{eq:31}
+\mathcal{G} \left( \boldsymbol{k}; i \nu_{n} \right)
+=
+\left[ \pm \left( 2s + 1 \right) \right]^{1} *
+\frac{1}{\beta^{2} \hbar^{2}} \frac{1}{V^{2}}
+\sum_{i \nu_{n}}
+\sum_{i \nu_{m}}
+\sum_{\boldsymbol{k}}
+\sum_{\boldsymbol{q}}
+\mathcal{G}_{F} * \mathcal{G}_{I}
+\end{equation}

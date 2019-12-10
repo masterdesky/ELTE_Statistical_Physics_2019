@@ -20,7 +20,7 @@
     \diagram* {
       {[edges=fermion]
         (a4) -- [momentum=$\boldsymbol{k}; i \nu_{n}$] (a3),
-        (a3) -- [momentum=$\boldsymbol{q}; i \nu_{m}$] (a2),
+        (a3) -- [momentum=$\boldsymbol{k}; i \nu_{n}$] (a2),
         (a2) -- [momentum=$\boldsymbol{k}; i \nu_{n}$] (a1),
       },
       (a2) -- [rmomentum=$\boldsymbol{0}; 0$, dash pattern=on 4pt off 4pt] (b1),
@@ -38,3 +38,116 @@
 \end{center}
 
 \subsection*{Solution}
+Fermion propagator lines are building connections between the points $\left( x' \to x_{2} \right)$, $\left( x_{2} \to x_{1} \right)$, $\left( x_{1} \to x \right)$, $\left( x_{1}' \to x_{1}' \right)$ and $\left( x_{2}' \to x_{2}' \right)$, where the last two are fermion loops. Their contributions are:
+
+\begin{equation} \label{eq:39}
+- \mathcal{G}_{0} \left( \boldsymbol{k}; i \nu_{n} \right)
+=
+- \frac{1}{i \nu_{n} - \frac{1}{\hbar} \left( \varepsilon_{\boldsymbol{k}} - \mu \right)}
+\end{equation}
+Using this relation, the contribution of fermion propagator lines in this graph are the following:
+
+\begin{align} \label{eq:40}
+\mathcal{G}_{F}
+&=
+\left[ - \mathcal{G}_{0} \left( \boldsymbol{k}; i \nu_{n} \right) \right]
+*
+\left[ - \mathcal{G}_{0} \left( \boldsymbol{k}; i \nu_{n} \right) \right]
+*
+\left[ - \mathcal{G}_{0} \left( \boldsymbol{k}; i \nu_{n} \right) \right]
+*
+\left[ - \mathcal{G}_{0} \left( \boldsymbol{k}'; i \nu_{n}' \right) \right]
+*
+\left[ - \mathcal{G}_{0} \left( \boldsymbol{k}''; i \nu_{n}'' \right) \right]
+= \nonumber \\
+&=
+- \left[ \mathcal{G}_{0} \left( \boldsymbol{k}; i \nu_{n} \right) \right]^{3}
+*
+\mathcal{G}_{0} \left( \boldsymbol{k}'; i \nu_{n}' \right)
+*
+\mathcal{G}_{0} \left( \boldsymbol{k}''; i \nu_{n}'' \right)
+\end{align}
+Which could be expressed as follows according to Eq. (\ref{eq:39}):
+
+\begin{equation} \label{eq:41}
+\mathcal{G}_{F}
+=
+- \left[ \frac{1}{i \nu_{n} - \frac{1}{\hbar} \left( \varepsilon_{\boldsymbol{k}} - \mu \right)} \right]^{3}
+*
+\frac{1}{i \nu_{n}' - \frac{1}{\hbar} \left( \varepsilon_{\boldsymbol{k}'} - \mu \right)}
+*
+\frac{1}{i \nu_{n}'' - \frac{1}{\hbar} \left( \varepsilon_{\boldsymbol{k}''} - \mu \right)}
+\end{equation}
+All contribution from $\mathcal{G}_{0} \left( \boldsymbol{k}; i \nu_{n} \right)$ propagators should be multiplied by the factor $e^{i \nu_{n} \eta}$, if the propagator line is a closed loop itself, or whether its endpoints are connected with an interaction line. Here both $\mathcal{G}_{0} \left( \boldsymbol{k}'; i \nu_{n}' \right)$ and $\mathcal{G}_{0} \left( \boldsymbol{k}''; i \nu_{n}'' \right)$ are subjects to this condition, and should be multiplied by the previously mentioned factor. Thus the contribution from the propagator lines are changing as the following:
+
+\begin{equation} \label{eq:42}
+\mathcal{G}_{F}
+=
+- \left[ \frac{1}{i \nu_{n} - \frac{1}{\hbar} \left( \varepsilon_{\boldsymbol{k}} - \mu \right)} \right]^{3}
+*
+\frac{e^{i \nu_{n}'}}{i \nu_{n}' - \frac{1}{\hbar} \left( \varepsilon_{\boldsymbol{k}'} - \mu \right)}
+*
+\frac{e^{i \nu_{n}''}}{i \nu_{n}'' - \frac{1}{\hbar} \left( \varepsilon_{\boldsymbol{k}''} - \mu \right)}
+\end{equation}
+Interaction lines running between the points $\left( x_{1}, x_{1}' \right)$ and $\left( x_{2}, x_{2}' \right)$. The contribution from an ($\boldsymbol{k}; i \nu_{n}$) interaction line is frequency-independent and is the following:
+
+\begin{equation} \label{eq:43}
+\mathcal{G}_{I} \left( \boldsymbol{k}; i \nu_{n} \right)
+=
+- \frac{1}{\hbar} v \left( \boldsymbol{k} \right)
+\end{equation}
+Using this relation the total contribution of interaction lines in this graph is
+
+\begin{equation} \label{eq:44}
+\mathcal{G}_{I}
+=
+\left[ - \frac{1}{\hbar} v \left( \boldsymbol{0} \right) \right]
+*
+\left[ - \frac{1}{\hbar} v \left( \boldsymbol{0} \right) \right]
+=
+\left[ \frac{1}{\hbar} v \left( \boldsymbol{0} \right) \right]^{2}
+\end{equation}
+To put everything together, we need to sum over all independent frequencies and momentums:
+
+\begin{equation} \label{eq:45}
+\mathcal{G} \left( \boldsymbol{k}; i \nu_{n} \right)
+=
+\frac{1}{\beta \hbar} \sum_{i \nu_{n}}
+\frac{1}{\beta \hbar} \sum_{i \nu_{n}'}
+\frac{1}{\beta \hbar} \sum_{i \nu_{n}''}
+\frac{1}{V} \sum_{\boldsymbol{k}}
+\frac{1}{V} \sum_{\boldsymbol{k}'}
+\frac{1}{V} \sum_{\boldsymbol{k}''}
+\mathcal{G}_{F} * \mathcal{G}_{I}
+=
+\frac{1}{\beta^{3} \hbar^{3}} \frac{1}{V^{3}}
+\sum_{i \nu_{n}}
+\sum_{i \nu_{n}'}
+\sum_{i \nu_{n}''}
+\sum_{\boldsymbol{k}}
+\sum_{\boldsymbol{k}'}
+\sum_{\boldsymbol{k}''}
+\mathcal{G}_{F} * \mathcal{G}_{I}
+\end{equation}
+Finally this contribution should be multiplied by another factor, which is the contribution of the propagator loops itself:
+
+\begin{equation} \label{eq:46}
+\mathcal{G}_{L}
+=
+\left[ \pm \left( 2s + 1 \right) \right]^{L}
+\end{equation}
+Where $L$ is the number of propagator loops. Since there are two propagator loops, $L = 2$. Thus the final Green's function is the following:
+
+\begin{equation} \label{eq:47}
+\mathcal{G} \left( \boldsymbol{k}; i \nu_{n} \right)
+=
+\left[ \pm \left( 2s + 1 \right) \right]^{2} *
+\frac{1}{\beta^{3} \hbar^{3}} \frac{1}{V^{3}}
+\sum_{i \nu_{n}}
+\sum_{i \nu_{n}'}
+\sum_{i \nu_{n}''}
+\sum_{\boldsymbol{k}}
+\sum_{\boldsymbol{k}'}
+\sum_{\boldsymbol{k}''}
+\mathcal{G}_{F} * \mathcal{G}_{I}
+\end{equation}

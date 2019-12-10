@@ -20,11 +20,11 @@
         (a2) -- [momentum=$\boldsymbol{k}; i \nu_{n}$] (a1),
       },
       (a2) -- [rmomentum=$\boldsymbol{0}; 0$, dash pattern=on 4pt off 4pt] (b1),
-      (b2) -- [dash pattern=on 4pt off 4pt] (b3),
-      (b2) -- [momentum'=$\boldsymbol{q}; i \nu_{m}$, half right, looseness=1.6, in=-95, out=-85, fermion] (b3),
-      (b1) -- [momentum'=$\boldsymbol{k}'; i \nu_{n}'$, half right, looseness=1.2, in=-150, out=-30] (b2),
-      (b3) -- [momentum'=$\boldsymbol{k}'; i \nu_{n}'$, half right, looseness=1.2, in=-150, out=-30] (b1),
+      (b2) -- [rmomentum'=$\boldsymbol{q}'; i \nu_{m}'$, dash pattern=on 4pt off 4pt] (b3),
 
+      (b2) -- [momentum'=$\boldsymbol{q} - \boldsymbol{q}'; i \nu_{m} - i \nu_{m}'$, half right, looseness=1.6, in=-95, out=-85, fermion] (b3),
+      (b1) -- [momentum'=$\boldsymbol{q}; i \nu_{m}$, quarter right, in=-140, out=-40] (b2),
+      (b3) -- [momentum'=$\boldsymbol{q}; i \nu_{m}$, quarter right, in=-140, out=-40] (b1),
     };
     %\centerarc[fermion](c1)(0:180:1)
     %\centerarc[fermion](c1)(180:270:1)
@@ -35,3 +35,124 @@
 \end{center}
 
 \subsection*{Solution}
+Fermion propagator lines are building connections between the points $\left( x' \to x_{1} \right)$, $\left( x_{1} \to x \right)$, $\left( x_{1}' \to x_{2} \right)$, $\left( x_{2} \to x_{2}' \right)$ and $\left( x_{2}' \to x_{1}' \right)$. Their contributions are:
+
+\begin{equation} \label{eq:51}
+- \mathcal{G}_{0} \left( \boldsymbol{k}; i \nu_{n} \right)
+=
+- \frac{1}{i \nu_{n} - \frac{1}{\hbar} \left( \varepsilon_{\boldsymbol{k}} - \mu \right)}
+\end{equation}
+Using this relation, the contribution of fermion propagator lines in this graph are the following:
+
+\begin{align} \label{eq:52}
+\mathcal{G}_{F}
+&=
+\left[ - \mathcal{G}_{0} \left( \boldsymbol{k}; i \nu_{n} \right) \right]
+*
+\left[ - \mathcal{G}_{0} \left( \boldsymbol{k}; i \nu_{n} \right) \right]
+*
+\left[ - \mathcal{G}_{0} \left( \boldsymbol{q}; i \nu_{m} \right) \right]
+*
+\left[ - \mathcal{G}_{0} \left( \boldsymbol{q} - \boldsymbol{q}'; i \nu_{m} - i \nu_{m}' \right) \right]
+*
+\left[ - \mathcal{G}_{0} \left( \boldsymbol{q}; i \nu_{m} \right) \right]
+= \nonumber \\
+&=
+- \left[ \mathcal{G}_{0} \left( \boldsymbol{k}; i \nu_{n} \right) \right]^{2}
+*
+\left[ \mathcal{G}_{0} \left( \boldsymbol{q}; i \nu_{m} \right) \right]^{2}
+*
+\mathcal{G}_{0} \left( \boldsymbol{q} - \boldsymbol{q}'; i \nu_{m} - i \nu_{m}' \right)
+\end{align}
+Which could be expressed as follows according to Eq. (\ref{eq:51}):
+
+\begin{equation}  \label{eq:53}
+\mathcal{G}_{F}
+=
+- \left[
+\frac{1}{i \nu_{n} - \frac{1}{\hbar} \left( \varepsilon_{\boldsymbol{k}} - \mu \right)}
+\right]^{2}
+*
+\left[
+\frac{1}{i \nu_{m} - \frac{1}{\hbar} \left( \varepsilon_{\boldsymbol{q}} - \mu \right)}
+\right]^{2}
+*
+\frac{1}{\left( i \nu_{m} - i \nu_{m}' \right) - \frac{1}{\hbar} \left( \varepsilon_{\boldsymbol{q} - \boldsymbol{q}'} - \mu \right)}
+\end{equation}
+All contribution from $\mathcal{G}_{0} \left( \boldsymbol{k}; i \nu_{n} \right)$ propagators should be multiplied by the factor $e^{i \nu_{n} \eta}$, if the propagator line is a closed loop itself, or whether its endpoints are connected with an interaction line. Here only $\mathcal{G}_{0} \left( \boldsymbol{q} - \boldsymbol{q}'; i \nu_{m} - i \nu_{m}' \right)$ is subject to this condition, and should be multiplied by the previously mentioned factor. Thus the contribution from the propagator lines are changing as the following:
+
+\begin{equation} \label{eq:54}
+\mathcal{G}_{F}
+=
+- \left[
+\frac{1}{i \nu_{n} - \frac{1}{\hbar} \left( \varepsilon_{\boldsymbol{k}} - \mu \right)}
+\right]^{2}
+*
+\left[
+\frac{1}{i \nu_{m} - \frac{1}{\hbar} \left( \varepsilon_{\boldsymbol{q}} - \mu \right)}
+\right]^{2}
+*
+\frac{e^{\left( i \nu_{m} - i \nu_{m}' \right) \eta}}{\left( i \nu_{m} - i \nu_{m}' \right) - \frac{1}{\hbar} \left( \varepsilon_{\boldsymbol{q} - \boldsymbol{q}'} - \mu \right)}
+\end{equation}
+Interaction lines running between the points $\left( x_{1}, x_{1}' \right)$ and $\left( x_{2}, x_{2}' \right)$. The contribution from an ($\boldsymbol{k}; i \nu_{n}$) interaction line is frequency-independent and is the following:
+
+\begin{equation} \label{eq:55}
+\mathcal{G}_{I} \left( \boldsymbol{k}; i \nu_{n} \right)
+=
+- \frac{1}{\hbar} v \left( \boldsymbol{k} \right)
+\end{equation}
+Using this relation the total contribution of interaction lines in this graph is
+
+\begin{equation} \label{eq:56}
+\mathcal{G}_{I}
+=
+\left[ - \frac{1}{\hbar} v \left( \boldsymbol{0} \right) \right]
+*
+\left[ - \frac{1}{\hbar} v \left( \boldsymbol{q}' \right) \right]
+=
+\frac{1}{\hbar^{2}} v \left( \boldsymbol{0} \right) v \left( \boldsymbol{q}' \right)
+\end{equation}
+To put everything together, we need to sum over all independent frequencies and momentums:
+
+\begin{equation} \label{eq:57}
+\mathcal{G} \left( \boldsymbol{k}; i \nu_{n} \right)
+=
+\frac{1}{\beta \hbar} \sum_{i \nu_{n}}
+\frac{1}{\beta \hbar} \sum_{i \nu_{m}}
+\frac{1}{\beta \hbar} \sum_{i \nu_{m}'}
+\frac{1}{V} \sum_{\boldsymbol{k}}
+\frac{1}{V} \sum_{\boldsymbol{q}}
+\frac{1}{V} \sum_{\boldsymbol{q}'}
+\mathcal{G}_{F} * \mathcal{G}_{I}
+=
+\frac{1}{\beta^{3} \hbar^{3}} \frac{1}{V^{3}}
+\sum_{i \nu_{n}}
+\sum_{i \nu_{m}}
+\sum_{i \nu_{m}'}
+\sum_{\boldsymbol{k}}
+\sum_{\boldsymbol{q}}
+\sum_{\boldsymbol{q}'}
+\mathcal{G}_{F} * \mathcal{G}_{I}
+\end{equation}
+Finally this contribution should be multiplied by another factor, which is the contribution of the propagator loops itself:
+
+\begin{equation} \label{eq:58}
+\mathcal{G}_{L}
+=
+\left[ \pm \left( 2s + 1 \right) \right]^{L}
+\end{equation}
+Where $L$ is the number of propagator loops. Since there are only one propagator loop ($x_{1}' \to x_{2} \to x_{2}'$), $L = 1$. Thus the final Green's function is the following:
+
+\begin{equation} \label{eq:59}
+\mathcal{G} \left( \boldsymbol{k}; i \nu_{n} \right)
+=
+\left[ \pm \left( 2s + 1 \right) \right]^{1} *
+\frac{1}{\beta^{3} \hbar^{3}} \frac{1}{V^{3}}
+\sum_{i \nu_{n}}
+\sum_{i \nu_{m}}
+\sum_{i \nu_{m}'}
+\sum_{\boldsymbol{k}}
+\sum_{\boldsymbol{q}}
+\sum_{\boldsymbol{q}'}
+\mathcal{G}_{F} * \mathcal{G}_{I}
+\end{equation}
