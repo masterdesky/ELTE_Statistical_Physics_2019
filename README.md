@@ -1,1 +1,1 @@
-# ELTE_Statistical_Physics_2019
+# Statistical Physics 2019-2020/1 @ ELTE
